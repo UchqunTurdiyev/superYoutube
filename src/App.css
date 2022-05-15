@@ -1,38 +1,358 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background-color: #F9F9F9;
+    overflow-x: hidden;
+}
+.result{
+    color: #404040;
+     font-family: monospace;
+     font-size: 20px;
+     padding: 14px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    margin-top: 0;
+}
+.logo img{
+    width: 150px;
+}
+.header a img{
+    width: 100px;
+}
+.header_input{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.header_input input{
+    width: 90%;
+    background-color: #fff;
+    padding: 10px;
+    border: none;
+    font-size: 15px;
+    color: #404040;
+    border: 1px solid #404040;
+    box-shadow: 0 5px 5px #c1bfbf;
+    outline: none;
+    border-right: none;
+    
+}
+.search{
+   position: absolute;
+   width: 60px;
+   height: 100%;
+   top: 0px;
+   right: 1px;
+   border:1px solid #404040;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: #F8F8F8;
+   cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* main style parent div */
+.videoMain{
+    display: flex;
+    justify-content: space-between;
+    padding: 14px 60px;
+    width: 100%;
+}
+.videoIframe{
+    width: 914px;
+    height: 514px;
+}
+.videoInfo{
+    width: 100%;
+}
+.videoList{
+    margin-right: 100px;
+}
+/* main parent video  */
+iframe{
+    width: 100%;
+    height: 100%;
+}
+.videoSection{
+    padding: 0 20px 0 0;
+}
+/* right video list */
+.videoList > div {
+    width: 320px;
+    color: #404040;
+}
+.videoList > div img {
+    width: 50%;
+    height: 100px;
 }
 
-.App-link {
-  color: #61dafb;
+.videoItems{
+    display: flex;
+    margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.titleVideo{
+    padding: 8px 0 15px 0;
+    font-size: 14px;
+}
+.titleVideo b{
+    font-size: 14px;
+    color: #000;
+}
+.titleVideo span{
+    padding-top: 20px;
+    font-size: 10px;
+}
+
+.profile{
+    margin-left: 20px;
+}
+.profile img{
+    width: 40px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+.functions{
+    cursor: pointer;
+}
+
+.videoInfo .videoTitle, .chanelTitle{
+   color: #000;
+   font-family:sans-serif;
+}
+.videoInfo .videoTitle{
+    font-size: 18px;
+    font-weight: 100;
+}
+.videoInfo .chanelTitle{
+    font-size: 14px;
+    margin: 4px 0;
+}
+.videoInfo a{
+    font-size: 12px;
+    text-decoration: none;
+    margin: 4px 12px 8px 0;
+}
+
+.descriptionVideo{
+     color: #404040;
+     font-family: sans-serif;
+     font-weight: 100;
+     width: 75%;
+     font-size: 13px;
+}
+
+.icons{
+    display: flex;
+    align-items: center;
+}
+.icons .bi{
+    margin: 0 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.icons a{
+    text-decoration: none;
+    color: #111;
+    
+}
+.header .bi-filter-right{
+    display: none;
+}
+/* comments .......... */
+
+.myComent{
+    width: 100%;
+    border: 1px solid #6b6a6a;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 15px;
+    margin-top: 15px;
+}
+.comentText{
+    display: flex;
+    align-items: center;
+}
+.comentText img{
+    width: 60px;
+    margin: 0 10px 0 0;
+}
+.comentText h2{
+    font-size: 14px;
+}
+.comentText span{
+    font-size: 12px;
+}
+.ben{
+    display: flex;
+    align-items: center;
+
+}
+.ben .bi-bell{
+    cursor: pointer;
+}
+.ben button{
+    border: none;
+    border-radius: 5px;
+    background-color: #ECECEC;
+    padding: 8px 18px;
+    outline: none;
+   margin-right: 15px;
+   font-size: 16px;
+   cursor: pointer;
+}
+
+.comentForm{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.comentForm input{
+    border: none;
+    border-bottom: 1px solid #404040;
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    outline: none;
+    padding: 0 12px;
+    font-size: 16px;
+}
+.comentForm .btn_group{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+.comentForm .btn_group .btn-clear{
+    border: none;
+    border-radius: 5px;
+    background-color: #ECECEC;
+    padding: 8px 18px;
+    outline: none;
+   margin-right: 15px;
+   font-size: 16px;
+   cursor: pointer;
+}
+.comentForm .btn_group button{
+    border: none;
+    background-color: transparent;
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+/* media */
+
+@media (max-width: 1300px){
+    .videoIframe{
+        width: 814px;
+        height: 414px;
+    }
+}
+@media (max-width: 1220px){
+    .videoIframe{
+        width: 714px;
+        height: 384px;
+    }
+}
+
+@media (max-width: 1100px){
+    .videoMain{
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 60px;
+        flex-direction: column;
+    }
+    .videoIframe{
+        width: 100%;
+        height: 460px;
+    }
+}
+
+@media (max-width: 950px){
+    .videoMain{
+        padding: 14px 20px;
+    }
+    .header a img{
+        width: 80px;
+    }
+}
+
+@media (max-width: 760px){
+    .videoMain{
+        padding: 14px 0 0 20px;
+    }
+    .videoIframe{
+        width: 100%;
+        height: 360px;
+    }
+    .profile h3 {
+           display: none;
+    }
+    .header .bi-filter-right{
+        font-size: 25px;
+        display: block;
+    }
+    .icons .bi{
+       display: none;
+    }
+    .header_input{
+        width: 80%;
+    }
+    input{
+        width: 80%;
+        padding: 6px;
+    }
+    .search{
+        height: 100%;
+    }
+}
+
+@media (max-width: 560px){
+    .videoIframe{
+        width: 100%;
+        height: 300px;
+    }
+    .myComent{
+        width: 100%;
+        padding: 5px;
+        margin-top: 15px;
+    }
+    .ben bottom{
+        margin-right: 6px;
+    }
+}
+
+@media (max-width: 420px){
+    .videoIframe{
+        width: 100%;
+        height: 200px;
+    }
+    .header_input{
+        width: 90%;
+    }
+    input{
+        width: 90%;
+        padding: 6px;
+    }
+    .search{
+        height: 100%;
+    }
 }
